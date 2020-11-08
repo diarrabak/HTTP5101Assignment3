@@ -1,0 +1,23 @@
+﻿@model  IEnumerable<Assignment3_B_Diarra.Models.Student>
+
+@{
+    ViewBag.Title = "studentList";
+}
+
+<h2>List of the @Model.Count() students from the database</h2>
+<ol>
+    @foreach (var item in Model)
+    {
+        <li>
+            First name and last name:
+            @item.firstName  @item.surName
+            <ul>
+                <li>Enrollment date      : @item.enrolDate</li>
+                <li>Student Number: @item.studentNumber</li>
+
+            </ul>
+        </li>
+    }
+</ol>
+
+

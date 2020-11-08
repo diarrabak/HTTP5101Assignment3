@@ -1,0 +1,19 @@
+﻿@model  Assignment3_B_Diarra.Models.Teacher
+@{
+    ViewBag.Title = "Search";
+}
+@if (@Model.firstName != "Unknown" && @Model.surName != "Unknown")
+{
+    <h2>The teacher whose first name is @Model.firstName has the following information </h2>
+    <ul>
+        <li>First and last names: @Model.firstName @Model.surName </li>
+        <li>Hire date      : @Model.hireDate</li>
+        <li>Employee Number: @Model.employeeNumber</li>
+        <li>Salary         : @Model.salary</li>
+
+    </ul>
+} else {
+   <h2>This teacher does not exist in the database.</h2>
+}
+
+

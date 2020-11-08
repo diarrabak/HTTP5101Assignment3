@@ -1,0 +1,34 @@
+﻿@model  Assignment3_B_Diarra.Models.Teacher
+@{
+    ViewBag.Title = "Show";
+}
+@if (@Model.employeeNumber != "Unknown")
+{
+    <h2>The teacher whose  Employee ID is @Model.employeeNumber is </h2>
+    <ul>
+        <li>First and last names: @Model.firstName @Model.surName </li>
+        <li>Hire date      : @Model.hireDate</li>
+        <li>Employee Number: @Model.employeeNumber</li>
+        <li>Salary         : @Model.salary</li>
+
+    </ul>
+}
+else
+{
+    <h2>This teacher does not exist in the database.</h2>
+}
+@if (Model.moduleCode != "")
+{
+    <h2> @Model.firstName @Model.surName teaches the following subjects</h2>
+    <ul>
+        <li> Module code   : @Model.moduleCode  </li>
+        <li> Module code   : @Model.moduleName  </li>
+        <li> Starting on  : @Model.startDate  </li>
+        <li> Ending on     :@Model.finishDate </li>
+    </ul>
+}
+else
+{
+<h2> @Model.firstName @Model.surName has no teaching this semester!!</h2>
+}
+

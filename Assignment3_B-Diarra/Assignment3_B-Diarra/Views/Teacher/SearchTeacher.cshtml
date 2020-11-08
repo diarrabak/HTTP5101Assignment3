@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "SearchTeacher";
+}
+
+<h2>Search a teacher</h2>
+
+<form action="/Teacher/Search" method="GET">
+    <div>
+        <label for="teacherfName">Teacher first name</label>
+        <input type="text" id="teacherfName" name="fname" placeholder="Type the first name" />
+    </div>
+    <div>
+        <label for="teacherlName">Teacher last name</label>
+        <input type="text" id="teacherlName" name="lname" placeholder="Type the last name" />
+    </div>
+    <div>
+        <label for="hiredate">Hire date</label>
+        <input type="text" id="hiredate" name="hireDate" placeholder="Type the hiredate" />
+    </div>
+    <div>
+        <label for="salary">Salary</label>
+        <input type="text" id="salary" name="salary" placeholder="Type the salary" />
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+
+
+</form>
+

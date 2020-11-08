@@ -1,0 +1,45 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content,.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width:1000px;
+    border:2px dashed red;
+    margin: 0 auto;
+    text-align:center;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 480px;
+}
+body h2{
+    color: darkorchid;
+}
+.body-content ol{
+    margin:0 auto;
+    text-align:left;
+    margin-left:30%;
+    
+}
+.body-content ol ul{
+    margin-left:0;
+}
+.body-content ol > li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color:blue;
+        font-size:16px;
+ }
+
+    .body-content ul, form {
+        text-align:left;
+        margin-left:20%;
+    }
