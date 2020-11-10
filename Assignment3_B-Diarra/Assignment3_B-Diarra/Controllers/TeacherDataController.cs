@@ -68,12 +68,13 @@ namespace Assignment3_B_Diarra.Controllers
         /// <summary>
         /// This method displays a teacher selected by his employee number. It also shows the modules taught by the teacher.
         /// </summary>
-        /// <param name="employeeNumber"></param>
+        /// <param name="id"></param>
         /// <example>api/Teacher/displayTeacher/T381 </example>
         /// <example>api/Teacher/displayTeacher/T378 </example>
         /// <returns>Teacher with the name, employee number, hire date and modules taught</returns>
         // 
-       // [Route("api/TeacherData/displayTeacher/{employeeNumber}")]
+       [Route("api/TeacherData/displayTeacher/{id}")]
+
         [HttpGet]
         public Teacher displayTeacher(string id)
         {
@@ -129,10 +130,10 @@ namespace Assignment3_B_Diarra.Controllers
                     //We concatenate all the modules taught by that teacher in strings
                     if (selectedTeacher.moduleCode != "")
                     {
-                        selectedTeacher.moduleCode += "--------------------" + teacherAndModules[j].moduleCode;
-                        selectedTeacher.moduleName += "--------" + teacherAndModules[j].moduleName;
-                        selectedTeacher.startDate += " ------" + teacherAndModules[j].startDate;
-                        selectedTeacher.finishDate += " --------" + teacherAndModules[j].finishDate;
+                        selectedTeacher.moduleCode += "---------------------------" + teacherAndModules[j].moduleCode;
+                        selectedTeacher.moduleName += "------------" + teacherAndModules[j].moduleName;
+                        selectedTeacher.startDate += " ---------------" + teacherAndModules[j].startDate;
+                        selectedTeacher.finishDate += " -----------------" + teacherAndModules[j].finishDate;
                     }
                 }
             }

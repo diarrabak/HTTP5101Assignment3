@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Diagnostics;
 
 namespace Assignment3_B_Diarra.Controllers
 {
@@ -41,8 +40,9 @@ namespace Assignment3_B_Diarra.Controllers
         /// <summary>
         /// This method displays a teacher selected by his employee number. It also shows the modules taught by the teacher.
         /// </summary>
-        /// <param name="employeeNumber"></param>
-        /// <example>This function is called a form element from Index </example>
+        /// <param name="id"></param>
+        /// <example>Teacher/Show/T378 </example>
+		/// <example>Teacher/Show/T381 </example>
         /// <returns>Teacher name, employee number, hire date and modules taught to view</returns>
         // 
         
@@ -51,7 +51,6 @@ namespace Assignment3_B_Diarra.Controllers
             string employeeNumber = id;
             TeacherDataController controller = new TeacherDataController();
             Teacher selectedTeacher = controller.displayTeacher(employeeNumber);
-            Debug.WriteLine("The ID is " + selectedTeacher.employeeNumber);
 
             return View(selectedTeacher);
         }
