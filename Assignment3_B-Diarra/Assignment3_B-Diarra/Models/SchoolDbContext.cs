@@ -49,4 +49,4 @@ namespace Assignment3_B_Diarra.Models
 }
 
 
-//The original code of this function is from the Web Application professor Christine Bitt of Humber College.
+//The original code of this function is from the Web Application professor Christine Bittle of Humber College.

@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Show";
 }
-@if (@Model.employeeNumber != "Unknown")
+@if (@Model.employeeNumber != "Unknown" && @Model.employeeNumber !=" ")
 {
     <h2>The teacher whose  Employee ID is @Model.employeeNumber is </h2>
     <ul>

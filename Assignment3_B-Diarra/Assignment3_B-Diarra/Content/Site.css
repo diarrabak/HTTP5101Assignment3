@@ -32,6 +32,13 @@ body h2{
 .body-content ol ul{
     margin-left:0;
 }
+    .body-content ol li ul {
+        display: none;
+    }
+    .body-content ol li:hover ul {
+        display: block;
+    }
+
 .body-content ol > li {
         padding-top: 5px;
         padding-bottom: 5px;

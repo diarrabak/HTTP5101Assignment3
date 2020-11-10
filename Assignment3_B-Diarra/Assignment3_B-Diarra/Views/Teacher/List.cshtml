@@ -8,15 +8,10 @@
 <ol>
     @foreach (var item in Model)
     {
-        <li> First name and last name:
-            @item.firstName  @item.surName
-            <ul>
-                <li>Hire date      : @item.hireDate</li>
-                <li>Employee Number: @item.employeeNumber</li>
-                <li>Salary         : @item.salary</li>
-
-            </ul>
-        </li>
+    <li>
+        <a href="/Teacher/Show/@item.employeeNumber"> @item.firstName  @item.surName</a>
+        
+    </li>
     }
 </ol>
 
