@@ -13,6 +13,7 @@ namespace Assignment3_B_Diarra.Models
         public string employeeNumber;
         public DateTime hireDate;
         public decimal salary;
+		//Modules taught by the teacher
         public string moduleCode;
         public string moduleName;
         public string startDate;  // String was used here for easy display reason 

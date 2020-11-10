@@ -24,7 +24,7 @@ namespace Assignment3_B_Diarra.Controllers
             return View();
         }
         /// <summary>
-        /// This method put in a list all teacher returned by the Query
+        /// This method puts in a list all teachers returned by the Query
         /// <example>GET: Teacher/List </example>
         /// </summary>
         /// <returns>it returns the list of teachers with name, employee number and hire date</returns>
@@ -56,7 +56,7 @@ namespace Assignment3_B_Diarra.Controllers
             List<int> positions = new List<int>();
             int i = 0;
 
-            // This loop determine the number of occurence of the teacher to determine the number of module taught
+            // This loop determines the number of occurence of the teacher to determine the number of module taught
             foreach(Teacher current in teacherList)
             {
                 if (current.employeeNumber == teacherEmployeenumber)
@@ -68,9 +68,10 @@ namespace Assignment3_B_Diarra.Controllers
             
             selectedTeacher = teacherList[positions[0]];
 
-            //This loop add all the modules taught together to be displayed by the teacher
+            //This loop adds all the modules taught together to be displayed by the teacher
             for (int j = 1; j < positions.Count; j++)
             {
+				//We concatenate all the modules taught by that teacher in strings
                 if (selectedTeacher.moduleCode!="")
                 {
                     selectedTeacher.moduleCode += "--------------------" + teacherList[positions[j]].moduleCode;
@@ -107,7 +108,7 @@ namespace Assignment3_B_Diarra.Controllers
             TeacherDataController list = new TeacherDataController();
             List<Teacher> teacherList = list.ListTeachers().ToList();
             Teacher selectedTeacher = new Teacher();
-            //This loop compare the parameters to the teacher list and return a teacher if all the parameters are met
+            //This loop compares the parameters to the teacher list and return a teacher if all the parameters are met
             foreach (Teacher current in teacherList)
             {
                 if (current.firstName == fname && current.surName == lname && current.hireDate == hireDate && current.salary == salary)

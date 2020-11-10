@@ -20,7 +20,7 @@ namespace Assignment3_B_Diarra.Controllers
         /// </summary>
         /// <example>GET api/classesData/ListClasses</example>
         /// <returns>
-        /// A list of classes with teachers name
+        /// A list of classes with assigned teachers name
         /// </returns>
         [HttpGet]
         public IEnumerable<ClassModule> ListClasses()
@@ -34,7 +34,7 @@ namespace Assignment3_B_Diarra.Controllers
             //Establish a new command (query) for our database
             MySqlCommand cmd = Conn.CreateCommand();
 
-            //This query will get student table
+            //This query will get informatiom from classes and teachers tables
             cmd.CommandText = "SELECT classes.*,teacherfname,teacherlname FROM classes Left JOIN teachers ON classes.teacherid=teachers.teacherid";
 
             //This variable will contain the ghathered results
@@ -50,7 +50,7 @@ namespace Assignment3_B_Diarra.Controllers
                 ClassModule classe = new ClassModule();   //A temporary variable to store current class
                 classe.classCode = ResultSet["classcode"].ToString();
                 classe.className = ResultSet["classname"].ToString();
-                classe.teacherName = ResultSet["teacherfname"].ToString()+ " "+ ResultSet["teacherlname"].ToString();
+                classe.teacherFullName = ResultSet["teacherfname"].ToString()+ " "+ ResultSet["teacherlname"].ToString();
                 classe.startDate = (DateTime)ResultSet["startdate"];  //Cast the result to date type
                 classe.finishDate = (DateTime)ResultSet["finishdate"];  //Cast the result to date type
                 //Add the module to the List
@@ -67,4 +67,4 @@ namespace Assignment3_B_Diarra.Controllers
 }
 
 
-//The original code of this function is from the Web Application professor Christine Bitt of Humber College.
+//NB:The original code of this function is from the Web Application professor Christine Bittle of Humber College.

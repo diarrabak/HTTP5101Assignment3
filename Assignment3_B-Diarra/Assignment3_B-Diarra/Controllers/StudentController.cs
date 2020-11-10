@@ -14,8 +14,9 @@ namespace Assignment3_B_Diarra.Controllers
         {
             return View();
         }
+		
         /// <summary>
-        /// This method put in a list all students returned by the Query
+        /// This method puts in a list all the students returned by the Query
         /// <example>GET: Student/Studentlist </example>
         /// </summary>
         /// <returns>it returns the list of students with name, student number and enrollment date</returns>

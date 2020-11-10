@@ -5,6 +5,7 @@ using System.Web;
 
 namespace Assignment3_B_Diarra.Models
 {
+	//This class creates a student with the main properties
     public class Student
     {
         public string firstName;

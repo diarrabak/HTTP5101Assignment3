@@ -72,4 +72,4 @@ namespace Assignment3_B_Diarra.Controllers
 }
 
 
-//The original code of this function is from the Web Application professor Christine Bitt of Humber College.
+//NB: The original code of this function is from the Web Application professor Christine Bitt of Humber College.

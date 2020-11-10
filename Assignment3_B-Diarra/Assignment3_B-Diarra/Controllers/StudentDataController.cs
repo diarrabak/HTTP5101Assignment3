@@ -47,23 +47,23 @@ namespace Assignment3_B_Diarra.Controllers
             while (ResultSet.Read())
             {
                 //Access Column information by the DB column name as an index
-                Student student = new Student();   //A temporary variable to store current teacher
+                Student student = new Student();   //A temporary variable to store current student
                 student.firstName = ResultSet["studentfname"].ToString();
                 student.surName = ResultSet["studentlname"].ToString();
                 student.studentNumber = ResultSet["studentnumber"].ToString();
                 student.enrolDate = (DateTime)ResultSet["enroldate"];  //Cast the result to date type
-                //Add the teacher and his module to the List
+                //Add the student to the List
                 students.Add(student);
             }
 
             //Close the connection between the MySQL Database and the WebServer
             Conn.Close();
 
-            //Return the final list of teachers and their modules
+            //Return the final list of students
             return students;
         }
     }
 }
 
 
-//The original code of this function is from the Web Application professor Christine Bitt of Humber College.
+//NB: The original code of this function is from the Web Application professor Christine Bittle of Humber College.
