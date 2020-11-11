@@ -4,14 +4,10 @@
 }
 @if (@Model.firstName != "Unknown" && @Model.surName != "Unknown")
 {
-    <h2>The teacher whose first name is @Model.firstName is in the database as follows </h2>
-    <ul>
-        <li>First and last names: @Model.firstName @Model.surName </li>
-        <li>Hire date      : @Model.hireDate</li>
-        <li>Employee Number: @Model.employeeNumber</li>
-        <li>Salary         : @Model.salary</li>
-
-    </ul>
+  <h2>
+     <a href="/Teacher/Show/@Model.employeeNumber"> This teacher is @Model.firstName  @Model.surName</a>
+  </h2>
+    
 } else {
    <h2>This teacher does not exist in the database.</h2>
 }

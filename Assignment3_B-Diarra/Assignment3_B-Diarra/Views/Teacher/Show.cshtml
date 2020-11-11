@@ -4,7 +4,7 @@
 }
 @if (@Model.employeeNumber != "Unknown" && @Model.employeeNumber !=" ")
 {
-    <h2>The teacher whose  Employee ID is @Model.employeeNumber is </h2>
+    <h2>The teacher whith Employee ID @Model.employeeNumber is </h2>
     <ul>
         <li>First and last names: @Model.firstName @Model.surName </li>
         <li>Hire date      : @Model.hireDate</li>
@@ -19,7 +19,7 @@ else
 }
 @if (Model.moduleCode != "")
 {
-    <h2> @Model.firstName @Model.surName teaches the following subjects</h2>
+    <h2> @Model.firstName @Model.surName teaches the modules</h2>
     <ul>
         <li> Module code   : @Model.moduleCode  </li>
         <li> Module code   : @Model.moduleName  </li>
